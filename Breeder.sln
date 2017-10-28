@@ -1,7 +1,13 @@
 
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Breeder", "Breeder\Breeder.csproj", "{676B438E-BB7D-48BD-84DB-6D6159B4582C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BreederWeb", "Breeder\BreederWeb.csproj", "{676B438E-BB7D-48BD-84DB-6D6159B4582C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DatabaseAccess", "DatabaseAccess\DatabaseAccess.csproj", "{B37F457D-2984-4F1D-891F-391773F7069F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Breeder.Framework", "BreederFramework\Breeder.Framework.csproj", "{F9825256-91BE-4B39-9816-662D30108EE1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Breeder.Common", "Breeder.Common\Breeder.Common.csproj", "{47E05030-AD8A-4743-BA03-24B8772999E4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,5 +19,17 @@ Global
 		{676B438E-BB7D-48BD-84DB-6D6159B4582C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{676B438E-BB7D-48BD-84DB-6D6159B4582C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{676B438E-BB7D-48BD-84DB-6D6159B4582C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B37F457D-2984-4F1D-891F-391773F7069F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B37F457D-2984-4F1D-891F-391773F7069F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B37F457D-2984-4F1D-891F-391773F7069F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B37F457D-2984-4F1D-891F-391773F7069F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F9825256-91BE-4B39-9816-662D30108EE1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F9825256-91BE-4B39-9816-662D30108EE1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F9825256-91BE-4B39-9816-662D30108EE1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F9825256-91BE-4B39-9816-662D30108EE1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{47E05030-AD8A-4743-BA03-24B8772999E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{47E05030-AD8A-4743-BA03-24B8772999E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{47E05030-AD8A-4743-BA03-24B8772999E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{47E05030-AD8A-4743-BA03-24B8772999E4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
