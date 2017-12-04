@@ -1,0 +1,247 @@
+﻿@model BreederWeb.Models.BullyDogViewModel
+
+<div class="banner_main"></div>
+
+@if (Model.SelectedPet != null)
+{  
+    <div class="bully_info_wrapper">
+        <div class="bully_info_left">
+            <div class="bully_info_photo">
+                <h1>@Model.SelectedPet.Name</h1>
+                <img class="img-center hero_image" src="../../uploads/dogs/1/image_20170621_135523_594ab30b6a7d7.jpg">
+                <div class="bully_info_comments">
+                   <p></p>
+                </div>
+            </div> <!-- End bully_info_photo -->
+        </div> <!-- end bully_info_left -->
+
+        <div class="bully_info_right">
+            <div class="bully_info_group">
+                <h3>General Information</h3>
+                    <div class="bully_attr">
+                        <p class="bully_attr_head">Registration Name:</p>
+                        <p class="bully_attr_data">@Model.SelectedPet.Name</p>
+                    </div>
+                    <div class="bully_attr">
+                        <p class="bully_attr_head">Gender:</p>
+                        <p class="bully_attr_data">@Model.SelectedPet.Gender</p>
+                    </div>
+                    <div class="bully_attr">
+                        <p class="bully_attr_head">Date of Birth:</p>
+                        <p class="bully_attr_data">@Model.SelectedPet.Birthdate</p>
+                    </div>
+                    <div class="bully_attr">
+                        <p class="bully_attr_head">Registered Color:</p>
+                        <p class="bully_attr_data">@Model.SelectedPet.Color?.Name</p>
+                    </div>
+                </div>
+
+               <div class="bully_info_group">
+                    <h3>Current Status</h3>
+                    <div class="bully_attr">
+                        <p class="bully_attr_head">Current Status:</p>
+                        <p class="bully_attr_data">@Model.SelectedPet.Status?.Name</p>
+                    </div>
+                    <div class="bully_attr">
+                        <p class="bully_attr_head">Price:</p>
+                        <p class="bully_attr_data">@Model.SelectedPet.Price</p>
+                    </div>
+            
+                    <div style="margin-bottom: 20px;">&nbsp;</div>
+                    <div class="geneology_photo_wrapper">
+                            <a class="more_photo" href="self">(doesnt work) Photo Album >></a>
+                    </div>
+            
+             </div>
+        </div><!-- end bully_info_right -->
+
+        <div class="bully_info_right">
+            <div class="bully_info_group">
+                <h3>Genealogy</h3>
+                <div class="bully_attr">
+                    <p class="bully_attr_head">Registered Sire:</p>
+                    <p class="bully_attr_data">@Model.SelectedPet.Sir?.Name</p>
+                </div>
+                <div class="bully_attr">
+                    <p class="bully_attr_head">Registered Dam:</p>
+                    <p class="bully_attr_data">@Model.SelectedPet.Dam?.Name</p>
+                </div>
+            </div>
+        </div> <!-- end bully_info_right -->
+    </div> <!--end bully_info_wrapper -->
+
+
+var unknownName = "Unknown Geneology";
+<!-- geneology info-->
+if (Model.SelectedPet.Sir != null)
+{  
+    <div class="pedigree_section_wrapper">
+        <div class="pedigree_header_wrapper">
+            <div class="pedigree_header"><h3>1st Generation</h3></div>
+            <div class="pedigree_header"><h3>2nd Generation</h3></div>
+        </div>
+        <div class="bully_pedigree_wrapper">   
+            <div class="generation_1">
+                <div class="parent_wrapper">
+                    <div class="geneology_content">
+                        <div class="geneology_photo_wrapper">
+                            <a asp-controller="BullyDog" asp-action="GetPetInfo" asp-route-id="@Model.SelectedPet.Sir.Id">
+                                <div class="geneology_photo" style="background-image: url(../../uploads/dogs/1/image_20170621_135523_594ab30b6a7d7.jpg)"></div>
+                            </a>
+                        </div>
+                        <div class="geneology_text_wrapper">
+                            <p class="geneology_name">
+                                <a asp-controller="BullyDog" asp-action="GetPetInfo" asp-route-id="@Model.SelectedPet.Sir.Id">
+                                    <i class="fa fa-mars"></i>@Model.SelectedPet.Sir.Name</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+		    <div class="generation_2">
+                <div class="pedigreeLine pedigreeLineUpper lineUpper1a">&nbsp;</div>
+                <div class="parent_wrapper">
+                    @if (Model.SelectedPet.Sir.Sir == null)
+                        {
+                            <div class="geneology_content">
+                                <span>@unknownName</span>
+                            </div>
+                        }
+                    else
+                    {
+                        <div class="geneology_content">
+                            <div class="geneology_photo_wrapper">
+                                <a asp-controller="BullyDog" asp-action="GetPetInfo" asp-route-id="@Model.SelectedPet.Sir.Sir.Id">
+                                    <div class="geneology_photo" style="background-image: url(../../uploads/dogs/no_image_available.png)"></div>
+                                </a>
+                            </div>
+                            <div class="geneology_text_wrapper">
+                                <p class="geneology_name">
+                                    <a asp-controller="BullyDog" asp-action="GetPetInfo" asp-route-id="@Model.SelectedPet.Sir.Sir.Id">
+							            <i class="fa fa-venus"></i>@Model.SelectedPet.Sir.Sir?.Name</a>
+                                </p>
+                            </div>
+                        </div>
+                    }
+                </div>
+
+                <div class="pedigreeLine pedigreeLineLower lineLower1b">&nbsp;</div>
+                <div class="parent_wrapper">
+                    @if (Model.SelectedPet.Sir.Dam == null)
+                        {
+                            <div class="geneology_content">
+                                <span>@unknownName</span>
+                            </div>
+                        }
+                    else
+                    {
+                        <div class="geneology_content">
+                            <div class="geneology_photo_wrapper">
+                                <a asp-controller="BullyDog" asp-action="GetPetInfo" asp-route-id="@Model.SelectedPet.Sir.Dam.Id">
+                                    <div class="geneology_photo" style="background-image: url(../../uploads/dogs/no_image_available.png)"></div>
+                                </a>
+                            </div>
+                            <div class="geneology_text_wrapper">
+                                <p class="geneology_name">
+                                    <a asp-controller="BullyDog" asp-action="GetPetInfo" asp-route-id="@Model.SelectedPet.Sir.Dam.Id">
+							            <i class="fa fa-venus"></i>@Model.SelectedPet.Sir.Dam?.Name</a>
+                                </p>
+                            </div>
+                        </div>
+                    }
+                </div>
+            </div> <!-- end generation_2 -->
+        </div> <!-- end bully_pedigree_wrapper -->
+
+    </div>
+    }
+
+
+<!-- geneology info-->
+if (Model.SelectedPet.Dam != null)
+{  
+    <div class="pedigree_section_wrapper">
+        <div class="pedigree_header_wrapper">
+            <div class="pedigree_header"><h3>1st Generation</h3></div>
+            <div class="pedigree_header"><h3>2nd Generation</h3></div>
+        </div>
+        <div class="bully_pedigree_wrapper">   
+            <div class="generation_1">
+                <div class="parent_wrapper">
+                    <div class="geneology_content">
+                        <div class="geneology_photo_wrapper">
+                            <a asp-controller="BullyDog" asp-action="GetPetInfo" asp-route-id="@Model.SelectedPet.Dam.Id">
+                                <div class="geneology_photo" style="background-image: url(../../uploads/dogs/1/image_20170621_135523_594ab30b6a7d7.jpg)"></div>
+                            </a>
+                        </div>
+                        <div class="geneology_text_wrapper">
+                            <p class="geneology_name">
+                                <a asp-controller="BullyDog" asp-action="GetPetInfo" asp-route-id="@Model.SelectedPet.Dam.Id">
+                                    <i class="fa fa-mars"></i>@Model.SelectedPet.Dam.Name</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+      
+            <div class="generation_2">
+                <div class="pedigreeLine pedigreeLineUpper lineUpper1a">&nbsp;</div>
+			    <div class="parent_wrapper">
+                    @if (Model.SelectedPet.Dam.Sir == null)
+                        {
+                            <div class="geneology_content">
+                                <span>@unknownName</span>
+                            </div>
+                        }
+                    else
+                    {
+                        <div class="geneology_content">
+                            <div class="geneology_photo_wrapper">
+                                <a asp-controller="BullyDog" asp-action="GetPetInfo" asp-route-id="@Model.SelectedPet.Dam.Sir.Id">
+                                    <div class="geneology_photo" style="background-image: url(../../uploads/dogs/no_image_available.png)"></div>
+                                </a>
+                            </div>
+                            <div class="geneology_text_wrapper">
+                                <p class="geneology_name">
+                                    <a asp-controller="BullyDog" asp-action="GetPetInfo" asp-route-id="@Model.SelectedPet.Dam.Sir.Id">
+							            <i class="fa fa-venus"></i>@Model.SelectedPet.Dam.Sir?.Name</a>
+                                </p>
+                            </div>
+                        </div>
+                    }
+                </div>
+
+                <div class="pedigreeLine pedigreeLineLower lineLower1b">&nbsp;</div>
+                <div class="parent_wrapper">
+                    @if (Model.SelectedPet.Dam.Dam == null)                         {                             <div class="geneology_content">                                 <span>@unknownName</span>                             </div>                         }
+    				else
+    				{
+                        <div class="geneology_content">
+                            <div class="geneology_photo_wrapper">
+                                <a asp-controller="BullyDog" asp-action="GetPetInfo" asp-route-id="@Model.SelectedPet.Dam.Dam.Id">
+                                    <div class="geneology_photo" style="background-image: url(../../uploads/dogs/no_image_available.png)"></div>
+                                </a>
+                            </div>
+                            <div class="geneology_text_wrapper">
+                                <p class="geneology_name">
+                                    <a asp-controller="BullyDog" asp-action="GetPetInfo" asp-route-id="@Model.SelectedPet.Dam.Dam.Id">
+							            <i class="fa fa-venus"></i>@Model.SelectedPet.Dam.Dam?.Name</a>
+                                </p>
+                            </div>
+                        </div>
+    				}
+                </div>
+            </div> <!-- end generation_2 -->
+        
+        </div> <!-- end bully_pedigree_wrapper -->
+
+    </div>
+    }
+} 
+<!--  end if (Model.SelectedPet != null) -->
+
+
+
+
+

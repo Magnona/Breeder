@@ -1,6 +1,8 @@
 ﻿body {
     padding-top: 50px;
     padding-bottom: 20px;
+    background-color: black;
+    color: #ffffff;
 }
 
 /* Wrapping element */
@@ -8,6 +10,10 @@
 .body-content {
     padding-left: 15px;
     padding-right: 15px;
+}
+
+hr {
+    border: 0px;
 }
 
 /* Carousel */
@@ -33,3 +39,613 @@
         display: none;
     }
 }
+
+.img-center {
+    align-content: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Home Page */
+a.btn-caption-more {
+    display: table;
+    border-radius: 4px;
+    background: #00bff3;
+    text-shadow: none;
+    color: #fff;
+    margin: 15px auto 15px;
+    padding: 3px 15px;
+    text-align: center;
+    font-size: 11px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+a.btn-caption-more:hover {
+    text-decoration: none;
+}
+
+.carousel-caption .caption-con h4 {
+    margin: 0 0 15px;
+    text-align: center;
+}
+
+.carousel-caption .caption-con h4 a {
+    font-size: 20px;
+    font-weight: 900;
+    color: #fff;
+}
+
+.carousel-caption .caption-con h4 a:hover {
+        text-decoration: none;
+    }
+
+
+/*
+    Banner
+*/
+
+.banner_main {
+    width: 100% !important;
+    max-width: 1700px;
+    height: 195px;
+    display: inline-block;
+    background-repeat: none;
+    background-position: center center;
+    background-image: url(/images/banner_main_1.jpg);
+}
+
+/* About page */
+.logo-container {
+}
+
+.big-logo {
+    align-content: center;
+    display: block;
+    width: 100%;
+}
+
+
+/* Puppy page - List */
+
+
+.dogContainer {
+    padding: 10px;
+}
+
+.dogContainer h4 {
+
+}
+
+.dogImgContainer {
+    width: 100%;
+    position: relative;
+}
+
+    .dogImgContainer img {
+        max-width: 100%; /* do not stretch the bootstrap column */
+    }
+
+
+
+.dogDataContainer {
+    margin: 0px auto 10px auto;
+}
+
+.dogShortDataContainer {
+    margin: 0px auto;
+    padding: 15px 0px 15px 0px;
+    display: table;
+    width: 100%;
+}
+
+    .dogShortDataContainer a {
+        color: white;
+        text-decoration: none;
+        text-transform: capitalize;
+    }
+
+        .dogShortDataContainer a:hover {
+            text-decoration: underline;
+        }
+
+
+    .dogShortDataContainer > * {
+        display: table-cell;
+    }
+
+        .dogShortDataContainer > *:last-child {
+            text-align: right;
+        }
+
+h4.dogInfoRight span {
+    font-weight: bold;
+    color: #d94747;
+}
+
+
+.mainPhotoContainer {
+    width: 394px;
+    background: url(../images/mainphotobox-bg.jpg) repeat-y;
+    padding: 0px;
+}
+
+.photoContainer {
+    padding-top: 14px;
+    background: url(../images/mainphotobox-header.jpg) no-repeat top center;
+    text-align: center;
+}
+
+.photoTitleContainer {
+    padding-top: 8px;
+    background: url(../images/mainphotobox-footer.jpg) no-repeat bottom center;
+    text-align: center;
+    height: 76px;
+}
+
+    .photoTitleContainer .title {
+        text-transform: capitalize;
+    }
+
+
+
+
+/* Puppy page - Detail */
+
+.bully_info_wrapper {
+    display: table;
+    width: 100%;
+    margin: 0 auto 10px;
+}
+
+.bully_info_wrapper .bully_info_left {
+    display: table-cell;
+    width: 45%;
+    padding: 25px 10px 0 10px;
+    vertical-align: top;
+    -webkit-box-shadow: 8px 0 6px -6px #eeeeee;
+    -moz-box-shadow: 8px 0 6px -6px #eeeeee;
+    box-shadow: 8px 0 6px -6px #eeeeee;
+}
+
+    .bully_info_wrapper .bully_info_right {
+        display: table-cell;
+        padding: 40px 10px 10px 15px;
+        width: 33%;
+        vertical-align: top;
+    }
+
+@media (min-width: 50px) {
+    .bully_info_wrapper .bully_info_left {
+        display: table-cell;
+        width: 34%;
+    }
+
+    .bully_info_wrapper .bully_info_right {
+        display: table-cell;
+        width: 33%;
+    }
+}
+
+.bully_info_photo h1 {
+    margin: 0 0 15px 10px;
+    font-size: 20px;
+    line-height: 24px;
+    color: #d94747;
+    font-weight: bold;
+    text-align: inherit;
+}
+
+
+.bully_info_photo .bully_hero {
+    width: 100%;
+    height: 400px;
+    margin: 0 0 10px 0;
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-position: center center;
+}
+
+.bully_info_photo .hero_image {
+    margin: 0 auto 10px;
+    width: 100%;
+}
+
+.bully_info_comments p {
+    margin: 0 0 10px 0;
+}
+
+.bully_info_group {
+    margin: 0 0 30px 0;
+}
+
+.bully_info_group h3 {
+    margin: 0 0 8px 0;
+    padding: 5px 0;
+    border-top: 1px solid #999999;
+    border-bottom: 1px solid #999999;
+    font-size: 18px;
+    line-height: 18px;
+    color: #d94747;
+    text-align: center;
+    font-weight: bold;
+    text-align: inherit;
+}
+
+.bully_info_group .more_photo {
+     border-top: 0px;
+    border-bottom: 0px;
+    color:white;
+}
+
+.bully_info_group .bully_attr {
+    display: table;
+    width: 100%;
+    margin: 0 0 3px 0;
+}
+
+.bully_info_group .bully_attr p {
+    font-size: 14px;
+    line-height: 18px;
+}
+
+.bully_info_group .bully_attr .bully_attr_head {
+    display: table-cell;
+    width: 50%;
+    padding: 0 10px 0 0;
+    vertical-align: top;
+    text-align: right;
+}
+
+.bully_info_group .bully_attr .bully_attr_data {
+    display: table-cell;
+    vertical-align: top;
+}
+
+.bully_info_group .bully_attr .bully_attr_data .bull_attr_list {
+    margin: 0 0 3px 0;
+}
+
+.bully_info_group .bully_attr .bully_attr_data select {
+    width: 95%;
+    color: #000000;
+}
+
+/*
+@media (min-width: 768px) {
+    .bully_info_group h3 { text-align: inherit; }
+    .bully_info_group .bully_attr .bully_attr_head { width: 45%; padding: 0 5px 0 0; text-align: inherit; }
+    .bully_info_group .bully_attr .bully_attr_data {  }
+}
+*/
+@media (min-width: 50px) {
+    .bully_info_group h3 {
+        text-align: inherit;
+    }
+
+    .bully_info_group .bully_attr .bully_attr_head {
+        width: 45%;
+        padding: 0 5px 0 0;
+        text-align: inherit;
+    }
+
+    .bully_info_group .bully_attr .bully_attr_data {
+    }
+}
+
+/*  geneology info */
+
+.bully_pedigree_wrapper {
+    position: relative;
+    display: inherit;
+    width: inherit;
+    margin: 0 auto 30px;
+}
+
+/*
+@media (min-width: 575px) {
+    .pedigree_section_wrapper { display: table; width: 100%; }
+    .bully_pedigree_wrapper { position: relative; display: table-cell; width: 50%; margin: 0 auto 30px; }
+}
+@media (min-width: 842px) {
+    .pedigree_section_wrapper { display: inherit; width: inherit; }
+    .bully_pedigree_wrapper { position: relative; display: table; width: inherit; max-width: 1050px; margin: 0 auto 30px; }
+}
+*/
+@media (min-width: 25px) {
+    .pedigree_section_wrapper {
+        display: table;
+        width: 60%;
+    }
+
+    .bully_pedigree_wrapper {
+        position: relative;
+        width: 50%;
+        margin: 0 auto 30px;
+    }
+}
+
+@media (min-width: 75px) {
+    .pedigree_section_wrapper {
+        display: inherit;
+        width: inherit;
+    }
+
+    .bully_pedigree_wrapper {
+        position: relative;
+        display: inherit;
+        width: inherit;
+        margin: 0 auto 30px;
+    }
+}
+
+.pedigree_header_wrapper {
+    width: 60%;
+    min-width: 500px; /*display: table;*/
+    display: none;
+}
+
+    .pedigree_header_wrapper .pedigree_header {
+        width: 50%;
+        display: table-cell;
+        text-align: center;
+    }
+
+    .pedigree_header_wrapper .pedigree_header h3 {
+        font-size: 18px;
+    }
+
+.generation_1 { /*display: table-cell;*/ /*width: 350px;*/
+    vertical-align: middle;
+    margin: 0 0 30px 0; /*background: #ff00ff;*/
+}
+
+.generation_2 { /*display: table-cell;*/ /*width: 350px;*/
+    vertical-align: middle;
+    margin: 0 0 30px 0; /*background: #00ffff;*/
+}
+
+.generation_1 h3 {
+    display: inherit;
+    text-align: center;
+}
+
+.generation_2 h3 {
+    display: inherit;
+    text-align: center;
+}
+
+.generation_1 .parent_wrapper {
+    width: 270px;
+    height: 270px;
+    position: relative;
+    display: table;
+    margin: 0 auto 10px; /*margin: 0 auto;*/
+    padding: 10px 10px 10px 10px;
+    overflow: hidden;
+    border: 1px solid #999999;
+    border-radius: 5px;
+    box-shadow: 1px 1px 2px #888888;
+    background: #000000;
+    z-index: 10;
+}
+
+.generation_2 .parent_wrapper {
+    width: 275px;
+    height: 160px;
+    position: relative;
+    display: table;
+    margin: 0 auto 10px; /*margin: 10px auto;*/
+    padding: 10px 10px 10px 10px;
+    overflow: hidden;
+    border: 1px solid #999999;
+    border-radius: 5px;
+    box-shadow: 1px 1px 2px #888888;
+    background: #000000;
+    z-index: 10;
+}
+/*
+@media (min-width: 842px) {
+    .generation_1 .parent_wrapper { margin: 0 auto; }
+    .generation_2 .parent_wrapper { margin: 10px auto; }
+}
+*/
+@media (min-width: 75px) {
+    .generation_1 .parent_wrapper {
+        margin: 0 auto;
+    }
+
+    .generation_2 .parent_wrapper {
+        margin: 10px auto;
+    }
+}
+
+.geneology_content {
+    display: table-cell;
+    width: 100%;
+    vertical-align: middle;
+}
+
+
+.generation_1 .geneology_photo_wrapper {
+    }
+
+.generation_2 .geneology_photo_wrapper {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+
+p.geneology_name a {
+    color: white;
+    text-decoration: none;
+    text-transform: capitalize;
+}
+
+    p.geneology_name a:hover {
+        text-decoration: underline;
+    }
+
+.geneology_text_wrapper {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+
+.geneology_content .geneology_photo {
+    margin: 0 auto;
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-position: center center;
+}
+
+.generation_1 .geneology_photo {
+    width: 100%;
+    height: 175px;
+    margin: 0 0 10px 0;
+}
+
+.generation_2 .geneology_photo {
+    width: 115px;
+    height: 115px;
+}
+
+
+.geneology_content p {
+    box-sizing: border-box;
+    text-align: center; /*height: 16px;*/
+    max-height: 50px;
+    font-size: 14px;
+    line-height: 16px;
+    word-wrap: break-word;
+    overflow: hidden;
+}
+
+.generation_1 .geneology_content p {
+    width: 248px;
+}
+
+.generation_2 .geneology_content p {
+    width: 135px;
+    height: inherit;
+    max-height: 32px;
+    padding: 0 0 0 10px;
+}
+
+
+.geneology_content p .fa {
+    margin: 0 5px 0 0;
+}
+
+.pedigreeLine {
+    position: absolute;
+    border-bottom: 2px solid #999999;
+    z-index: 9px;
+}
+
+.pedigreeLineUpper { /*-ms-transform: rotate(-20deg); -webkit-transform: rotate(-20deg); transform: rotate(-20deg);*/
+}
+
+.pedigreeLineLower { /*-ms-transform: rotate(20deg);  -webkit-transform: rotate(20deg);  transform: rotate(20deg);*/
+}
+
+.lineUpper1a {
+    width: 125px;
+    top: 75px;
+    left: 275px;
+    display: none;
+}
+
+.lineLower1b {
+    width: 125px;
+    top: 245px;
+    left: 275px;
+    display: none;
+}
+
+.lineUpper2a {
+    width: 190px;
+    top: 30px;
+    left: 550px;
+    display: none;
+}
+
+.lineLower2b {
+    width: 190px;
+    top: 115px;
+    left: 550px;
+    display: none;
+}
+
+.lineUpper2c {
+    width: 190px;
+    top: 200px;
+    left: 550px;
+    display: none;
+}
+
+.lineLower2d {
+    width: 190px;
+    top: 285px;
+    left: 550px;
+    display: none;
+}
+
+/*
+@media (min-width: 842px) {
+    .pedigree_header_wrapper { display: table; }
+    .generation_1 { display: table-cell; width: 350px; margin: 0; }
+    .generation_2 { display: table-cell; width: 350px; margin: 0; }
+    .generation_1 h3 { display: none; }
+    .generation_2 h3 { display: none; }
+    .lineUpper1a { display: block; }
+    .lineLower1b { display: block; }
+}
+*/
+@media (min-width: 75px) {
+    .pedigree_header_wrapper {
+        display: table;
+    }
+
+    .generation_1 {
+        display: table-cell;
+        width: 350px;
+        margin: 0;
+    }
+
+    .generation_2 {
+        display: table-cell;
+        width: 350px;
+        margin: 0;
+    }
+
+    .generation_1 h3 {
+        display: none;
+    }
+
+    .generation_2 h3 {
+        display: none;
+    }
+
+    .lineUpper1a {
+        display: block;
+    }
+
+    .lineLower1b {
+        display: block;
+    }
+}
+
+
+
+
+
+
+

@@ -21,9 +21,12 @@
   <ItemGroup>
     <Folder Include="Entities\" />
     <Folder Include="Data\" />
+    <Folder Include="Migrations\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Remove="DbInitializer.cs" />
+    <Compile Remove="Migrations\20171025031305_InitialCreate.cs" />
+    <Compile Remove="Migrations\20171025031305_InitialCreate.Designer.cs" />
   </ItemGroup>
 	<ItemGroup>
     <Content Include="..\Breeder\appsettings.json" Link="appsettings.json">

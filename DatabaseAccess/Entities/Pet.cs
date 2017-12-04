@@ -20,7 +20,7 @@ namespace DatabaseAccess.Entities
         #region Properties
         [Key]
         [Column("PetId")]
-        public Guid Id { get; set; }
+        public int Id { get; set; }
 
         [StringLength((int)DefaultStringLength.Name)]
         public string Name { get; set; }
@@ -38,15 +38,15 @@ namespace DatabaseAccess.Entities
 
         public bool IsAdult { get; set; }
 
-        public Guid StatusId { get; set; }
+        public int StatusId { get; set; }
 
-        public Guid ColorId { get; set; }
+        public int ColorId { get; set; }
 
-        public Guid BreedId { get; set; }
+        public int BreedId { get; set; }
 
-        public Guid? SirId { get; set; }
+        public int? SirId { get; set; }
 
-        public Guid? DamId { get; set; }
+        public int? DamId { get; set; }
 
         #region ForeignKey
 

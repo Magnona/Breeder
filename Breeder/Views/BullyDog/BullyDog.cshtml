@@ -1,0 +1,43 @@
+﻿@model BreederWeb.Models.BullyDogViewModel
+
+<div class="banner_main"></div> 
+<div class="dogListContainer">
+<h2>@Model.Title</h2>
+
+
+<div class="container">
+	<div class="row">
+        @{ 
+		    var numOfCols = 3;
+            var rowCount = 0; 
+		}
+
+        @foreach (var item in Model.Pets) 
+        {
+            <div class="col-sm-4">
+                <div class="dogContainer">
+                        <div class="dogImgContainer">
+                            <a asp-controller="BullyDog" asp-action="GetPetInfo" asp-route-id="@item.Id">                                 <img src="../uploads/dogs/1/image_20170621_135523_594ab30b6a7d7.jpg">                             </a>
+                        </div>                                          
+                        <div class="dogShortDataContainer">
+                            <h4><a asp-controller="BullyDog" asp-action="GetPetInfo" asp-route-id="@item.Id">@item.Name</a></h4>
+						    <h4 class="dogInfoRight" ></h4>
+    						@if(item.IsForSale)
+    						{
+    					        <h4 class="dogInfoRight" ><span>@item.Status?.Name</span></h4>
+    						}
+                        </div>
+                    </div>
+            </div>
+
+            rowCount++;
+            if(rowCount % numOfCols == 0) 
+            { 
+                @:</div><div class="row"> 
+            }
+           
+        }
+    </div> <!-- row -->
+</div> <!-- container -->
+</div>
+  

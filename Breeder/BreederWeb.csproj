@@ -22,8 +22,12 @@
   <ItemGroup>
     <Compile Remove="DesignTimeDbContextFactory.cs" />
     <Compile Remove="DesignTimeServiceProviderAccessor.cs" />
+    <Compile Remove=":Users:magnona:Documents:work:USA:Friends:Vera:Breeder:DatabaseAccess:ServiceCollectionExtension.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Views\Puppy\" />
+    <Folder Include="Views\BullyDog\" />
+    <Folder Include="wwwroot\uploads\" />
+    <Folder Include="wwwroot\uploads\dogs\" />
+    <Folder Include="wwwroot\uploads\dogs\1\" />
   </ItemGroup>
 </Project>

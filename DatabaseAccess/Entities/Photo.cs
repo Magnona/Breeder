@@ -8,7 +8,7 @@ namespace DatabaseAccess.Entities
     {
         [Key]
         [Column("PhotoId")]
-        public Guid Id { get; set; }
+        public int Id { get; set; }
 
         public bool IsKeyPhoto { get; set; }
 
@@ -20,7 +20,7 @@ namespace DatabaseAccess.Entities
 
         public int Order { get; set; }
 
-        public Guid PetId { get; set; }
+        public int PetId { get; set; }
 
         public virtual Pet Pet { get; set; }
     }

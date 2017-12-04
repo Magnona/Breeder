@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore.Migrations;
+﻿using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using System;
 using System.Collections.Generic;
 
@@ -12,7 +13,8 @@ namespace DatabaseAccess.Migrations
                 name: "Breed",
                 columns: table => new
                 {
-                    BreedId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    BreedId = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
                     Description = table.Column<string>(type: "nvarchar(500)", maxLength: 500, nullable: true),
                     Name = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: true)
                 },
@@ -25,7 +27,8 @@ namespace DatabaseAccess.Migrations
                 name: "Color",
                 columns: table => new
                 {
-                    ColorId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    ColorId = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
                     Name = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: true)
                 },
                 constraints: table =>
@@ -37,7 +40,8 @@ namespace DatabaseAccess.Migrations
                 name: "Status",
                 columns: table => new
                 {
-                    StatusId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    StatusId = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
                     Name = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: true)
                 },
                 constraints: table =>
@@ -49,19 +53,20 @@ namespace DatabaseAccess.Migrations
                 name: "Pet",
                 columns: table => new
                 {
-                    PetId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    PetId = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
                     Birthdate = table.Column<DateTime>(type: "datetime2", nullable: true),
-                    BreedId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    ColorId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    DamId = table.Column<Guid>(type: "uniqueidentifier", nullable: true),
+                    BreedId = table.Column<int>(type: "int", nullable: false),
+                    ColorId = table.Column<int>(type: "int", nullable: false),
+                    DamId = table.Column<int>(type: "int", nullable: true),
                     Description = table.Column<string>(type: "nvarchar(500)", maxLength: 500, nullable: true),
                     Gender = table.Column<int>(type: "int", nullable: false),
                     IsAdult = table.Column<bool>(type: "bit", nullable: false),
                     IsForSale = table.Column<bool>(type: "bit", nullable: false),
                     Name = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: true),
                     Price = table.Column<double>(type: "float", nullable: false),
-                    SirId = table.Column<Guid>(type: "uniqueidentifier", nullable: true),
-                    StatusId = table.Column<Guid>(type: "uniqueidentifier", nullable: false)
+                    SirId = table.Column<int>(type: "int", nullable: true),
+                    StatusId = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -102,12 +107,13 @@ namespace DatabaseAccess.Migrations
                 name: "Photo",
                 columns: table => new
                 {
-                    PhotoId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    PhotoId = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
                     FileLink = table.Column<string>(type: "nvarchar(500)", maxLength: 500, nullable: true),
                     FileName = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: true),
                     IsKeyPhoto = table.Column<bool>(type: "bit", nullable: false),
                     Order = table.Column<int>(type: "int", nullable: false),
-                    PetId = table.Column<Guid>(type: "uniqueidentifier", nullable: false)
+                    PetId = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -124,10 +130,11 @@ namespace DatabaseAccess.Migrations
                 name: "Video",
                 columns: table => new
                 {
-                    VideoId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    VideoId = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
                     FileName = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: true),
                     Order = table.Column<int>(type: "int", nullable: false),
-                    PetId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    PetId = table.Column<int>(type: "int", nullable: false),
                     VideoLink = table.Column<string>(type: "nvarchar(500)", maxLength: 500, nullable: true)
                 },
                 constraints: table =>

@@ -8,7 +8,7 @@ namespace DatabaseAccess.Entities
     {
         [Column("VideoId")]
         [Key]
-        public Guid Id { get; set; }
+        public int Id { get; set; }
 
         [StringLength((int)DefaultStringLength.Name)]
         public string FileName { get; set; }
@@ -18,7 +18,7 @@ namespace DatabaseAccess.Entities
 
         public int Order { get; set; }
 
-        public Guid PetId { get; set; }
+        public int PetId { get; set; }
 
         public virtual Pet Pet { get; set; }
     }

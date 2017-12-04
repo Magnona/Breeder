@@ -12,18 +12,18 @@ namespace Breeder.Common.Dto
 
 
         #region DAL Properites
-        public Guid Id { get; set; }
+        public int Id { get; set; }
         public string Name { get; set; }
 
         public Gender Gender { get; set; }
 
         public double Price { get; set; }
 
-        public Guid ColorId { get; set; }
+        public int ColorId { get; set; }
 
         public ColorDto Color { get; set; }
 
-        public Guid BreedId { get; set; }
+        public int BreedId { get; set; }
 
         public BreedDto Breed { get; set; }
 
@@ -31,7 +31,7 @@ namespace Breeder.Common.Dto
 
         public DateTime? Birthdate { get; set; }
 
-        public Guid StatusId { get; set; }
+        public int StatusId { get; set; }
 
         public StatusDto Status { get; set; }
 
@@ -39,11 +39,11 @@ namespace Breeder.Common.Dto
 
         public bool IsAdult { get; set; }
 
-        public Guid? SirId { get; set; }
+        public int? SirId { get; set; }
 
         public PetDto Sir { get; set; }
 
-        public Guid? DamId { get; set; }
+        public int? DamId { get; set; }
 
         public PetDto Dam { get; set; }
 
